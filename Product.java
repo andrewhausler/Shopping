@@ -2,13 +2,11 @@ public abstract class Product implements Comparable<Product>
 {
     private String name;
     private String description;
-    private int quantity;
     
-    public Product(String name, String description, int quantity)
+    public Product(String name, String description)
     {
         this.name = name;
         this.description = description;
-        this.quantity = quantity;
     }
 
     public String getName()
@@ -30,17 +28,7 @@ public abstract class Product implements Comparable<Product>
     {
         this.description = description;
     }
-
-    public int getQuantity()
-    {
-        return quantity;
-    }
-
-    public void setQuantity(int quantity)
-    {
-        this.quantity = quantity;
-    }
-
+    
     public int compareTo(Product product)
     {
         if(this.name.compareTo(product.getName()) >= 1)
@@ -55,5 +43,10 @@ public abstract class Product implements Comparable<Product>
         {
             return -1;
         }
+    }
+
+    public String toString()
+    {
+        return "Name: " + name + "\t Description: " + description;
     }
 }

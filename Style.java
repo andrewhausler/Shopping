@@ -3,9 +3,9 @@ public class Style extends Product
     private double size;
     private String color;
     
-    public Style(String name, String description, int quantity, double size, String color)
+    public Style(String name, String description, double size, String color)
     {
-        super(name, description, quantity);
+        super(name, description);
         this.size = size;
         this.color = color;
     }
@@ -33,6 +33,6 @@ public class Style extends Product
     @Override
     public String toString()
     {
-        return super.toString() + " Size: " + size + " Color: " + color;
+        return super.toString() + "\t Size: " + size + "\t Color: " + color;
     }
 }

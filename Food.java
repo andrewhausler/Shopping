@@ -3,9 +3,9 @@ public class Food extends Product
     private int calories;
     private int sugar;
     
-    public Food(String name, String description, int quantity, int calories, int sugar)
+    public Food(String name, String description, int calories, int sugar)
     {
-        super(name, description, quantity);
+        super(name, description);
         this.calories = calories;
         this.sugar = sugar;
     }
@@ -20,7 +20,7 @@ public class Food extends Product
         this.calories = calories;
     }
 
-    public String getSugar()
+    public int getSugar()
     {
         return sugar;
     }
@@ -33,6 +33,6 @@ public class Food extends Product
     @Override
     public String toString()
     {
-        return super.toString() + " Calories: " + calories + " Sugar: " + sugar;
+        return super.toString() + "\t Calories: " + calories + "\t Sugar: " + sugar;
     }
 }

@@ -1,12 +1,12 @@
 public class Electronics extends Product
 {
-    private boolean takeBatteries;
-    private boolean includeBatteries;
+    private Boolean takeBatteries;
+    private Boolean includeBatteries;
     private String typeBatteries;
     
-    public Electronics(String name, String description, int quantity, boolean takeBatteries, boolean includeBatteries, String typeBatteries)
+    public Electronics(String name, String description, Boolean takeBatteries, Boolean includeBatteries, String typeBatteries)
     {
-        super(name, description, quantity)
+        super(name, description);
         this.takeBatteries = takeBatteries;
         if(takeBatteries == false)
         {
@@ -53,7 +53,7 @@ public class Electronics extends Product
     @Override
     public String toString()
     {
-        return super.toString() + "Takes Batteries: " + takeBatteries + " Includes Batteries: " + includeBatteries + " Type of Batteries: " typeBatteries;
+        return super.toString() + "\t Takes Batteries: " + takeBatteries + "\t Includes Batteries: " + includeBatteries + "\t Type of Batteries: " + typeBatteries;
     }
 
 }

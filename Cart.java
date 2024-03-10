@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 /**
  * Interface for shopping the basic requirements 
  * Takes any reference type
@@ -22,4 +23,10 @@ public interface Cart<Type>
      * @param index The specific item you want removed
      */
     public void removeFromCart(int index);
+
+    /**
+     * Getter method to get access to the private arraylist
+     */
+    public ArrayList<Type> getMyCart();
+    
 }
